@@ -44,11 +44,11 @@ const handle = async (ev) => {
       defval: "", //给defval赋值为空的字符串
     };
 
+    // 获取到了excel数据
     let result = XLSX.utils.sheet_to_json(worksheet, sheet2JSONOpts); //json数据格式
-    // console.log(JSON.stringify(result));
-    console.log(result);
-    console.log(v4());
-    dataClassify(result);
+
+    // 根据具体需求来解析处理数据格式
+    // dataClassify(result);
   }
 };
 
@@ -150,36 +150,13 @@ const dataClassify = (data) => {
   console.log(JSON.stringify(stations));
   console.log(JSON.stringify(devices));
 };
-// const dataClassify = (data) => {
-//   let map = {};
-//   let sAlarmInfoList = [];
-//   data.forEach(item => {
-//     if (map[item.alarmTypeId]) {
-//       map[item.alarmTypeId].push({
-//         ...item
-//       })
-//     } else {
-//       map[item.alarmTypeId] = [
-//         {
-//           ...item
-//         }
-//       ]
-//     }
-//   });
-
-//   for (let key in map) {
-//     sAlarmInfoList.push({
-//       deviceCtcsId: key,
-//       version: 'V1.0',
-//       alarmInfoMap: map[key]
-//     })
-//   }
-//   console.log(JSON.stringify(sAlarmInfoList));
-// }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.hello {
+  margin-top: 30px;
+}
 h3 {
   margin: 40px 0 0;
 }
