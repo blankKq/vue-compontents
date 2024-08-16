@@ -65,6 +65,18 @@ const menuList = reactive([
       }
     ]
   },
+  {
+    name: "css动画",
+    icon: "",
+    code: "/css-animation",
+    children: [
+      {
+        code: "/semicircle-slider",
+        name: "圆环滑动",
+        icon: "",
+      }
+    ]
+  },
 ]);
 </script>
 

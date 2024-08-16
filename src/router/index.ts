@@ -11,6 +11,11 @@ const routes:any[] = [
     name: 'uploadExcel',
     component: () => import('../views/upload/upload-excel/upload-index.vue')
   },
+  {
+    path: '/semicircle-slider',
+    name: 'semicircleSlider',
+    component: () => import('../views/css-animation/semicircle-slider/semicircle-slider.vue')
+  },
 ]
 
 const router = createRouter({
